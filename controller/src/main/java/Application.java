@@ -1,3 +1,4 @@
+import com.demo.data.DataCenter;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.SystemUtils;
 import org.apache.commons.lang3.Validate;
@@ -15,6 +16,9 @@ public class Application {
             Validate.isTrue(
                     StringUtils.equalsIgnoreCase(SystemUtils.FILE_ENCODING, "utf-8"),
                     "字符编码必须是utf-8");
+
+            // 加载配置
+            DataCenter.getInstance().serverConfig.init();
 
         } catch (Exception e) {
             LOGGER.error("启动失败!", e);
