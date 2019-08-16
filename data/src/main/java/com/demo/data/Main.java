@@ -25,5 +25,7 @@ public class Main {
                 "字符集必须为utf-8");
         //加载配置文件
         DataCenter.getInstance().serverConfig.init();
+
+
     }
 }
