@@ -14,6 +14,7 @@ import java.io.IOException;
 @Singleton
 public class ServerConfig {
     private static final Logger LOGGER = LoggerFactory.getLogger(ServerConfig.class);
+
     public final String SERVER_CONFIG_FILE = "server-config.properties";
     private static final String SERVERS_INFO_FILE = "servers.info";
     public String version; // 游戏版本号
